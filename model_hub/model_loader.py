@@ -66,6 +66,7 @@ class ModelLoader:
                                 zip_.extractall(model_path)
                         else:
                             http_get(model_url, os.path.join(model_path, folder_name))
+                            input_name = folder_name
 
                     except Exception as exception:
                         shutil.rmtree(model_path)
